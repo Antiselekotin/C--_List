@@ -68,7 +68,7 @@ void char_list::list_print()
 
 char& char_list::operator[](const int index)
 {
-	elements* current = this->head;
+	elements* current = this->head; 
 	int count = 0;
 	while (current != nullptr)
 	{
@@ -78,5 +78,15 @@ char& char_list::operator[](const int index)
 		}
 		count++;
 		current = current->next;
+	}
+}
+void printer(char_list a)
+{
+	std::cout << "Do you wanna print your list? (y/n)" << std::endl;
+	char ans;
+	std::cin >> ans;
+	if (ans == 'y')
+	{
+		a.list_print();
 	}
 }

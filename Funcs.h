@@ -2,9 +2,9 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+
 struct char_list
 {
-private:
 		struct elements
 		{
 			elements* next;
@@ -17,7 +17,7 @@ private:
 		};
 		elements* head;
 		int size = 0;
-public:
+	
 	void push(char ch);
 	int length() { return size; }
 	void del(int a);
@@ -31,3 +31,4 @@ public:
 		size = 0;
 	}
 };
+void printer(char_list a);
